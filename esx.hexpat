@@ -63,7 +63,7 @@ struct TES3 {
 			if (DEVMODE) {
 				std::print("Unknown subrecord read in \"TES3\" record: {}", parent.tag);
 			}
-			std::mem::Bytes<size> undefined;
+			std::mem::Bytes<parent.size> undefined;
 		}
 	}
 } [[inline]];
@@ -280,7 +280,7 @@ struct CELL {
 			if (DEVMODE) {
 				std::print("Unknown subrecord read in \"CELL\" record: {}", parent.tag);
 			}
-			std::mem::Bytes<size> undefined;
+			std::mem::Bytes<parent.size> undefined;
 		}
 	}
 } [[inline]];
